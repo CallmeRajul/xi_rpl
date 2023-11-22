@@ -4,7 +4,7 @@
   align-items: center;
   height: 100%;
   width: 100%;
- 
+
 }
 
 table {
@@ -14,8 +14,8 @@ table {
   max-width: 85%;
   margin: 20px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  overflow: scroll;
-   border-radius: 9px;
+  overflow: hidden;
+  border-radius: 1000px;
   /* From https://css.glass */
   background: rgba(112, 151, 231, 0.15);
   /* border-radius: 16px; */
