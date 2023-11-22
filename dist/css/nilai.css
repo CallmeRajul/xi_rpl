@@ -7,20 +7,13 @@
 
 }
 
-html {
-	font-family: "Fira Sans", Avenir, sans-serif;
-}
-
-body {
-	max-width: 50em;
-}
 
 table {
 	width: 100%;
 	border-collapse: collapse;
 	table-layout: fixed;
   margin: 0px 3%;
-  border-bottom: 1px solid #fff;
+ 
 }
 
 caption {
@@ -80,7 +73,7 @@ td:hover {
 }
 
 .scrollable tbody {
-	max-height: 20em;
+	max-height: 40em;
 	position: relative;
 	-ms-overflow-style: -ms-autohiding-scrollbar;
 }
