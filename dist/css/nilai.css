@@ -14,7 +14,7 @@ table {
   max-width: 85%;
   margin: 20px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+  overflow: scroll;
    border-radius: 9px;
   /* From https://css.glass */
   background: rgba(112, 151, 231, 0.15);
@@ -38,6 +38,7 @@ th {
 }
 
 tr {
+
   transition: 200ms ease;
 }
 
