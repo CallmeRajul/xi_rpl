@@ -411,8 +411,8 @@ label[for="nav-footer-toggle"] {
     position: absolute;
     left: 15vw;
     top: 1vw;
-    height: 95.6vh;
-    width: 84vw;
+    width: 80vw;
+    height: 93vh;
     background: var(--navbar-dark-primary);
     border-radius: 16px;
     display: flex;

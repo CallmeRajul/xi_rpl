@@ -33,7 +33,7 @@ if (isset($_SESSION['role'])) {
             break;
         case 'teacher':
             $profileLink = '/profileLink/';
-            $galleryLink = '/galleryLink/';  
+            $galleryLink = '/galleryLink/';
             $newsLink = '/newsLink/';
             $absensiLink = '/absensiLink/';
             $jadwalLink = '/jadwalLink/';

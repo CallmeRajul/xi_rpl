@@ -1,45 +1,52 @@
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100% ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }
+
 table {
-    border-collapse: collapse;
-    width: 90%;
-    max-width: 800px;
-    margin: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    border-radius: 10px;
-   /* From https://css.glass */
-background: rgba(112, 151, 231, 0.15);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5.1px);
--webkit-backdrop-filter: blur(5.1px);
-border: 1px solid rgba(112, 151, 231, 0.3);     
-  }
+  border-collapse: collapse;
+  width: 90%;
+  height: 85%;
+  max-width: 85%;
+  margin: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+   border-radius: 9px;
+  /* From https://css.glass */
+  background: rgba(112, 151, 231, 0.15);
+  /* border-radius: 16px; */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.1px);
+  -webkit-backdrop-filter: blur(5.1px);
+  border: 1px solid rgba(112, 151, 231, 0.3);
+}
 
-  th, td {
-    padding: 15px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-  }
+th,
+td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
 
-  th {
-    background-color: #3498db; 
-    color: #fff;
-  }
+th {
+  background-color: #3498db;
+  color: #fff;
+}
 
-  tr:hover {
-    background-color: rgb(240, 240, 240);
-    color: black;
-  }
+tr {
+  transition: 200ms ease;
+}
 
-  @media screen and (max-width: 600px) {
-    table {
-      width: 100%;
-    }
+tr:hover {
+  background-color: rgb(240, 240, 240);
+  color: black;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    width: 100%;
   }
+}
