@@ -42,6 +42,8 @@ if (isset($_SESSION['nis']) == null) {
 						<th>Column 3</th>
 						<th>Column 4</th>
 						<th>Column 5</th>
+						<th>Column 6</th>
+						<th>Column 7</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -51,6 +53,8 @@ if (isset($_SESSION['nis']) == null) {
 						<td>Cell 3</td>
 						<td>Cell 4</td>
 						<td>Cell 5</td>
+						<td>Cell 6</td>
+						<td>Cell 7</td>
 					</tr>
 					<tr>
 						<td>Cell 1</td>
@@ -58,6 +62,8 @@ if (isset($_SESSION['nis']) == null) {
 						<td>Cell 3</td>
 						<td>Cell 4</td>
 						<td>Cell 5</td>
+						<td>Cell 6</td>
+						<td>Cell 7</td>
 					</tr>
 					<tr>
 						<td>Cell 1</td>
@@ -65,6 +71,8 @@ if (isset($_SESSION['nis']) == null) {
 						<td>Cell 3</td>
 						<td>Cell 4</td>
 						<td>Cell 5</td>
+						<td>Cell 6</td>
+						<td>Cell 7</td>
 					</tr>
 					<tr>
 						<td>Cell 1</td>
@@ -72,6 +80,8 @@ if (isset($_SESSION['nis']) == null) {
 						<td>Cell 3</td>
 						<td>Cell 4</td>
 						<td>Cell 5</td>
+						<td>Cell 6</td>
+						<td>Cell 7</td>
 					</tr>
 					<tr>
 						<td>Cell 1</td>
@@ -79,6 +89,71 @@ if (isset($_SESSION['nis']) == null) {
 						<td>Cell 3</td>
 						<td>Cell 4</td>
 						<td>Cell 5</td>
+						<td>Cell 6</td>
+						<td>Cell 7</td>
+					</tr>
+					<tr>
+						<td>Cell 1</td>
+						<td>Cell 2</td>
+						<td>Cell 3</td>
+						<td>Cell 4</td>
+						<td>Cell 5</td>
+						<td>Cell 6</td>
+						<td>Cell 7</td>
+					</tr>
+					<tr>
+						<td>Cell 1</td>
+						<td>Cell 2</td>
+						<td>Cell 3</td>
+						<td>Cell 4</td>
+						<td>Cell 5</td>
+						<td>Cell 6</td>
+						<td>Cell 7</td>
+					</tr>
+					<tr>
+						<td>Cell 1</td>
+						<td>Cell 2</td>
+						<td>Cell 3</td>
+						<td>Cell 4</td>
+						<td>Cell 5</td>
+						<td>Cell 6</td>
+						<td>Cell 7</td>
+					</tr>
+					<tr>
+						<td>Cell 1</td>
+						<td>Cell 2</td>
+						<td>Cell 3</td>
+						<td>Cell 4</td>
+						<td>Cell 5</td>
+						<td>Cell 6</td>
+						<td>Cell 7</td>
+					</tr>
+					<tr>
+						<td>Cell 1</td>
+						<td>Cell 2</td>
+						<td>Cell 3</td>
+						<td>Cell 4</td>
+						<td>Cell 5</td>
+						<td>Cell 6</td>
+						<td>Cell 7</td>
+					</tr>
+					<tr>
+						<td>Cell 1</td>
+						<td>Cell 2</td>
+						<td>Cell 3</td>
+						<td>Cell 4</td>
+						<td>Cell 5</td>
+						<td>Cell 6</td>
+						<td>Cell 7</td>
+					</tr>
+					<tr>
+						<td>Cell 1</td>
+						<td>100</td>
+						<td>100</td>
+						<td>100</td>
+						<td>100</td>
+						<td>100</td>
+						<td>100</td>
 					</tr>
 				</tbody>
 			</table>
