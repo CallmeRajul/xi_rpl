@@ -29,7 +29,7 @@
             include "../komponen/navbar.php";
             ?>
             <div class="absensi">
-
+                
             </div>
         </div>
     </body>
