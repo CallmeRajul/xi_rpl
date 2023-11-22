@@ -2,11 +2,14 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 100%;
 	width: 100%;
 
 }
-
+.judul {
+	color: beige;
+	margin-left: 50px;
+	padding: 10px;
+}
 
 table {
 	width: 100%;
