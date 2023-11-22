@@ -1,6 +1,6 @@
-<div id="nav-bar" ><input id="nav-toggle" type="checkbox" />
-    <div id="nav-header" onclick="document.getElementById('dashboardLink').click()" ><a id="nav-title" href="#" target="_blank">XI RPL</a><label for="nav-toggle"><span
-                id="nav-toggle-burger"></span></label>
+<div id="nav-bar"><input id="nav-toggle" type="checkbox" />
+    <div id="nav-header" onclick="document.getElementById('dashboardLink').click()"><a id="nav-title" href="#"
+            target="_blank">XI RPL</a><label for="nav-toggle"><span id="nav-toggle-burger"></span></label>
         <hr />
     </div>
     <div id="nav-content">
@@ -14,7 +14,51 @@
         <div class="nav-button"><i class="fas fa-magic"></i><span>Spark</span></div> -->
         <?php
 
-        if(isset($_))
+        if (isset($_SESSION['role']) == 'student') {
+            echo ("
+            <div class='nav-button' onclick='document.getElementById('/profilLink/').click()'><i class='fas fa-user'></i><span>Profil</span></div>
+            <div class='nav-button' onclick='document.getElementById('/galleryLink/').click()'><i class='fas fa-image'></i><span>Gallery</span></div>
+            <div class='nav-button' onclick='document.getElementById('/newsLink/').click()'><i class='fas fa-newspaper'></i><span>News</span></div>
+            <div class='nav-button' onclick='document.getElementById('/absensiLink/').click()'><i class='fas fa-edit'></i><span>Absensi</span></div>
+            <div class='nav-button' onclick='document.getElementById('/jadwalLink/').click()'><i class='fas fa-calendar'></i><span>Jadwal</span></div>
+            <div class='nav-button' onclick='document.getElementById('/nilaiLink/').click()'><i class='fas fa-star'></i><span>Nilai</span></div>
+               
+            ");
+            
+        } elseif (isset($_SESSION['role']) == 'teacher') {
+            echo ("
+            <div class='nav-button' onclick='document.getElementById('/profilLink/').click()'><i class='fas fa-user'></i><span>Profil</span></div>
+            <div class='nav-button' onclick='document.getElementById('/galleryLink/').click()'><i class='fas fa-image'></i><span>Gallery</span></div>
+            <div class='nav-button' onclick='document.getElementById('/newsLink/').click()'><i class='fas fa-newspaper'></i><span>News</span></div>
+            <div class='nav-button' onclick='document.getElementById('/absensiLink/').click()'><i class='fas fa-edit'></i><span>Absensi</span></div>
+            <div class='nav-button' onclick='document.getElementById('/jadwalLink/').click()'><i class='fas fa-calendar'></i><span>Jadwal</span></div>
+            <div class='nav-button' onclick='document.getElementById('/nilaiLink/').click()'><i class='fas fa-star'></i><span>Nilai</span></div>
+               
+            ");
+        } elseif (isset($_SESSION['role']) == 'admin') {
+            echo ("
+            <div class='nav-button' onclick='document.getElementById('/profilLink/').click()'><i class='fas fa-user'></i><span>Profil</span></div>
+            <div class='nav-button' onclick='document.getElementById('/galleryLink/').click()'><i class='fas fa-image'></i><span>Gallery</span></div>
+            <div class='nav-button' onclick='document.getElementById('/newsLink/').click()'><i class='fas fa-newspaper'></i><span>News</span></div>
+            <div class='nav-button' onclick='document.getElementById('/absensiLink/').click()'><i class='fas fa-edit'></i><span>Absensi</span></div>
+            <div class='nav-button' onclick='document.getElementById('/jadwalLink/').click()'><i class='fas fa-calendar'></i><span>Jadwal</span></div>
+            <div class='nav-button' onclick='document.getElementById('/nilaiLink/').click()'><i class='fas fa-star'></i><span>Nilai</span></div>
+               
+            ");
+        } elseif (isset($_SESSION['role']) == 'operator') {
+            echo ("
+            <div class='nav-button' onclick='document.getElementById('/profilLink/').click()'><i class='fas fa-user'></i><span>Profil</span></div>
+            <div class='nav-button' onclick='document.getElementById('/galleryLink/').click()'><i class='fas fa-image'></i><span>Gallery</span></div>
+            <div class='nav-button' onclick='document.getElementById('/newsLink/').click()'><i class='fas fa-newspaper'></i><span>News</span></div>
+            <div class='nav-button' onclick='document.getElementById('/absensiLink/').click()'><i class='fas fa-edit'></i><span>Absensi</span></div>
+            <div class='nav-button' onclick='document.getElementById('/jadwalLink/').click()'><i class='fas fa-calendar'></i><span>Jadwal</span></div>
+            <div class='nav-button' onclick='document.getElementById('/nilaiLink/').click()'><i class='fas fa-star'></i><span>Nilai</span></div>
+               
+            ");
+        } else {
+
+        }
+
 
 
         ?>
@@ -28,7 +72,7 @@
             <div id="nav-footer-avatar">
                 <?php
                 $imageData = base64_decode($_SESSION['image']);
-                echo '<img src="data:image/jpeg;base64,' . base64_encode($imageData) .'" >';
+                echo '<img src="data:image/jpeg;base64,' . base64_encode($imageData) . '" >';
 
                 ?>
             </div>
