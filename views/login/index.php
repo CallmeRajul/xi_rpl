@@ -17,7 +17,7 @@ if (isset($_SESSION['nis'])) {
         background-color: white;
         color: black;
         border: none;
-        border-radius: 10px;
+        border-radius: 8px;
         font-size: 14px;
         text-transform: uppercase;
         letter-spacing: 2px;
