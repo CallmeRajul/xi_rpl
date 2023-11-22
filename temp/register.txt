@@ -1,0 +1,18 @@
+nis
+username
+password
+role  = teacher , student , admin
+
+name
+phone
+email
+class = XIIRPL , XIRPL , XRPLI , XRPLII
+
+birth
+adress -> text area
+description -> text area
+image 
+
+note , all of the value must be in small letter not caps lock 
+
+
