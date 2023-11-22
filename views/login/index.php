@@ -97,7 +97,8 @@ if (isset($_SESSION['nis'])) {
             const type = passwordInput.getAttribute("type") === "password" ? "text" : "password"
             passwordInput.setAttribute("type", type)
         })
-    </script src=""><script>
+    </script>
+    <script src="../../dist/js/ripple.js">
     </script>
     <script src="../../dist/js/login.js"></script>
 </body>
