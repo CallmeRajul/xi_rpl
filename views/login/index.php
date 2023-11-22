@@ -9,6 +9,43 @@ if (isset($_SESSION['nis'])) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+<style>
+    button {
+        margin-top: 30px;
+        width: 40%;
+        height: 43px;
+        background-color: white;
+        color: black;
+        border: none;
+        border-radius: 10px;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        position: relative;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+        cursor: pointer;
+    }
+
+    button:focus {
+        outline: none;
+    }
+
+    button .ripple {
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        transform: scale(0);
+        animation: ripple 0.3s linear;
+    }
+
+    @keyframes ripple {
+        to {
+            transform: scale(2.5);
+            opacity: 0;
+        }
+    }
+</style>
 
 <head>
     <meta charset="UTF-8">
@@ -60,6 +97,7 @@ if (isset($_SESSION['nis'])) {
             const type = passwordInput.getAttribute("type") === "password" ? "text" : "password"
             passwordInput.setAttribute("type", type)
         })
+    </script src=""><script>
     </script>
     <script src="../../dist/js/login.js"></script>
 </body>

@@ -81,7 +81,7 @@ if (isset($_SESSION['nis'])) {
         </div>
         <p class="register-text">Have An Account? <a href="../login">Log In</a></p>
         <p class="copyright"> © 2023 XI RPL Copyright Dimensions</p>
-    </div>\
+    </div>
     <script src="../../dist/js/register.js"></script>
 </body>
 

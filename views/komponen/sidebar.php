@@ -1,4 +1,5 @@
 <div id="nav-bar"><input id="nav-toggle" type="checkbox" />
+
     <div id="nav-header" onclick="document.getElementById('dashboardLink').click()"><a id="nav-title" href="#"
             target="_blank">XI RPL</a><label for="nav-toggle"><span id="nav-toggle-burger"></span></label>
         <hr />
