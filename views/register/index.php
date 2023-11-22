@@ -60,7 +60,7 @@ if (isset($_SESSION['nis'])) {
                     <select name="class" id="class">
                         <option value="XIIRPL">XII-RPL</option>
                         <option value="XIRPL">XI-RPL</option>
-                        <option value="XRPL">XI-RPL</option>
+                        <option value="XRPL">X-RPL</option>
                     </select>
                 </div>
                 <!-- Third Group -->
@@ -71,7 +71,7 @@ if (isset($_SESSION['nis'])) {
                     <input type="text" placeholder="Description" id="description" name="description"
                         style="margin-top: 30px;">
                     <input type="file" id="image" name="image" accept=".jpg, .jpeg, .png" style="margin-top: 30px;">
-                    <button class="ripple">Log In</button>
+                    <button class="ripple">Register</button>
                 </div>
             </form>
         </div>
@@ -82,6 +82,7 @@ if (isset($_SESSION['nis'])) {
         <p class="register-text">Have An Account? <a href="../login">Log In</a></p>
         <p class="copyright"> © 2023 XI RPL Copyright Dimensions</p>
     </div>
+    <!-- <script src="../../dist/js/ripple.js"></script> -->
     <script src="../../dist/js/register.js"></script>
 </body>
 

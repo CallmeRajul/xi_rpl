@@ -9,14 +9,6 @@ if (isset($_SESSION['nis']) == null ) {
 
 ?>
 
-<?php
-session_start();
-
-if (!isset($_SESSION['nis'])) {
-    header("Location: ../login");
-    exit();
-}
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -34,6 +26,15 @@ if (!isset($_SESSION['nis'])) {
     <?php 
     
     include "../komponen/sidebar.php";
+
+    
+    ?>
+    <div id="main-content">
+
+    <?php
+    
+        
+    include "../komponen/navbar.php";
     
     ?>
     <div class="jadwal">
@@ -78,6 +79,8 @@ if (!isset($_SESSION['nis'])) {
         </table>
     </div>
     </div>
+    </div>
+    
     <script scr="../../dist/js/dashboard.js"></script>
 </body>
 </html>
