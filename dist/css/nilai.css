@@ -1,54 +1,100 @@
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
 
 }
 
+html {
+	font-family: "Fira Sans", Avenir, sans-serif;
+}
+
+body {
+	max-width: 50em;
+}
+
 table {
-  border-collapse: collapse;
-  width: 90%;
-  height: 85%;
-  max-width: 85%;
-  margin: 20px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  border-radius: 1000px;
-  /* From https://css.glass */
-  background: rgba(112, 151, 231, 0.15);
-  /* border-radius: 16px; */
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5.1px);
-  -webkit-backdrop-filter: blur(5.1px);
-  border: 1px solid rgba(112, 151, 231, 0.3);
+	width: 100%;
+	border-collapse: collapse;
+	table-layout: fixed;
+  margin: 0px 3%;
+  border-bottom: 1px solid #fff;
+}
+
+caption {
+	padding: 0.5em;
+	text-align: left;
+}
+
+thead tr,
+tfoot tr {
+	background: white;
+  color: black;
+}
+
+tbody tr:nth-child(even) {
+	background: transparen;
 }
 
 th,
 td {
-  padding: 15px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
+	border: 1px solid;
+	padding: 0.5em;
+	text-align: left;
+	vertical-align: top;
+	font-weight: normal;
+  transition: 150ms ease;
 }
 
-th {
-  background-color: #3498db;
-  color: #fff;
-}
-
-tr {
-
-  transition: 200ms ease;
-}
-
-tr:hover {
-  background-color: rgb(240, 240, 240);
+td:hover {
+  background-color: white;
   color: black;
 }
 
-@media screen and (max-width: 600px) {
-  table {
-    width: 100%;
-  }
+.scrollable thead,
+.scrollable tfoot,
+.scrollable tbody,
+.scrollable th,
+.scrollable td {
+	display: block;
+	width: 100%;
+}
+
+.scrollable thead,
+.scrollable tfoot,
+.scrollable tbody {
+	overflow-y: scroll;
+}
+
+.scrollable thead,
+.scrollable tfoot {
+	-ms-overflow-style: none;
+}
+
+.scrollable thead::-webkit-scrollbar,
+.scrollable tfoot::-webkit-scrollbar,
+.scrollable tbody::-webkit-scrollbar {
+	visibility: hidden;
+}
+
+.scrollable tbody {
+	max-height: 20em;
+	position: relative;
+	-ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.scrollable tr {
+	display: flex;
+}
+
+.scrollable tbody th,
+.scrollable tbody td {
+	border-top: none;
+}
+
+.scrollable th:not(:last-child),
+.scrollable td:not(:last-child) {
+	border-right: none;
 }
