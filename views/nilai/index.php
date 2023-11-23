@@ -34,7 +34,10 @@ if (isset($_SESSION['nis']) == null) {
 		include "../komponen/navbar.php"
 			?>
             <div class="judul">
-            <h2>Nilai Siswa:</h2>
+            <div class="judul-txt"><h2>Nilai Siswa:</h2></div>
+            <div class="pdfbutton">
+                <button class="btn"><i class="fa fa-download" aria-hidden="true"></i></button>
+            </div>
             </div>
              
 		<div class="container">
