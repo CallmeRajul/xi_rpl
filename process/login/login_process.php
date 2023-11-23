@@ -19,9 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
 
-            // Verify the password
             if (password_verify($password, $row['password'])) {
-                // Start a session
                 session_start();
 
             
@@ -42,6 +40,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     
                     $_SESSION['image'] = $row['image'];
                     $_SESSION['description'] = $row['description'];
+                    $_SESSION['name'] = $row['name']; 
+                    $_SESSION['phone'] = $row['phone']; 
+                    $_SESSION['email'] = $row['email']; 
+                    $_SESSION['class'] = $row['class']; 
+                    $_SESSION['birth'] = $row['birth']; 
+                    $_SESSION['address'] = $row['address'];
+
                     
                 }
 
