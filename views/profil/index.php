@@ -65,7 +65,7 @@ require_once "../../config/config.php";
                     </p>
                 </div>
                 <div class="bottom">
-                    <p style="color:white;">
+                    <p style="color:white;">    
                         <?php
 
                         echo $_SESSION['description'];
@@ -73,28 +73,41 @@ require_once "../../config/config.php";
                         ?>
                     </p>
                     <div class="card-footer text-center">
-                        <a href="edit_user.php" class="btn btn-primary">Edit Profile <i class="fas fa-edit"></i></a>
-                        <a href="logout.php" class="btn btn-danger">Print Pdf<i class="fas fa-download"></i> </a>
+                        <a href="../../process/profil/print/print_pdf.php" class="btn btn-primary">Edit Profile <i class="fas fa-edit"></i></a>
+                        <a href="../../process/profil/print/print_pdf.php" class="btn btn-danger">Print Pdf<i class="fas fa-download"></i> </a>
                     </div>
                 </div>
             </div>
             <div class="right">
-
                 <div class="wrapping">
                     <h2>Bio Lengkap</h2>
-                    <p>
-                        <?php
-                        echo '<strong>Name:</strong> ' . $_SESSION['name'] . '<br>';
-                        echo '<strong>Phone:</strong> ' . $_SESSION['phone'] . '<br>';
-                        echo '<strong>Email:</strong> ' . $_SESSION['email'] . '<br>';
-                        echo '<strong>Class:</strong> ' . $_SESSION['class'] . '<br>';
-                        echo '<strong>Birth:</strong> ' . $_SESSION['birth'] . '<br>';
-                        echo '<strong>Address:</strong> ' . $_SESSION['address'] . '<br>';
-                        echo '<strong>Description:</strong> ' . $_SESSION['description'];
-                        ?>
-                    </p>
+                    <ul clas="list">
+                        <li><strong>Name:</strong>
+                            <?php echo $_SESSION['name']; ?>
+                        </li>
+                        <li><strong>Nis:</strong>
+                            <?php echo $_SESSION['nis'];?>
+                        </li>
+                        <li><strong>Phone:</strong>
+                            <?php echo $_SESSION['phone']; ?>
+                        </li>
+                        <li><strong>Email:</strong>
+                            <?php echo $_SESSION['email']; ?>
+                        </li>
+                        <li><strong>Class:</strong>
+                            <?php echo $_SESSION['class']; ?>
+                        </li>
+                        <li><strong>Birth:</strong>
+                            <?php echo $_SESSION['birth']; ?>
+                        </li>
+                        <li><strong>Address:</strong>
+                            <?php echo $_SESSION['address']; ?>
+                        </li>
+                        <li><strong>Description:</strong>
+                            <?php echo $_SESSION['description']; ?>
+                        </li>
+                    </ul>
                 </div>
-
             </div>
         </div>
     </div>
