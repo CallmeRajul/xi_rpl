@@ -35,23 +35,31 @@ require_once "../../config/config.php";
     include "../komponen/sidebar.php";
 
     ?>
-    <div id="main-content">
+    <div id="main-content" style="background-color: transparent;">
         <?php
-        include "../komponen/navbar.php"
-            ?>
+        ?>
         <div class="container">
             <div class="left">
                 <div class="top">
-                    <div class="profile-container">
-                        <?php
-                        $imageData = base64_decode($_SESSION['image']);
-                        echo '<img src="data:image/jpeg;base64,' . base64_encode($imageData) . '" class="profile-pic" alt="User Image" width="150" height="150" >';
-                        ?>
+                    <label for="fileInput" id="imageContainer">
+                        <div class="wrapper">
+                            <?php
+                            if (isset($_SESSION['image']) && !empty($_SESSION['image'])) {
+                                $imageData = base64_decode($_SESSION['image']);
+                                echo '<img src="data:image/jpeg;base64,' . base64_encode($imageData) . '" class="profile-pic" alt="Profile Pic" id="profilePic">';
+                            } else {
+                                echo '<img src="../../dist/img/profile-pic.jpg" class="profile-pic" alt="Default Profile Pic" id="profilePic">';
+                            }
+                            ?>
 
-                        <!-- <img src="default_user_image.jpg"  height="150"> -->
-                        <!-- <a href="fi" target="_blank"><i class="fas fa-edit edit-icon"></i></a> -->
-                    </div>
-                    <h2 class="card-title">
+                            <i class="fas fa-edit edit-icon"></i>
+                            <!-- <img src="default_user_image.jpg"  height="150"> -->
+                            <!-- <a href="fi" target="_blank"><i class="fas fa-edit edit-icon"></i></a> -->
+                        </div>
+                    </label>
+                    <input type="file" id="fileInput" accept="image/*" onchange="displayImage(this)">
+
+                    <h2 class="card-title" style="margin-top: 20px;">
                         <?php
                         echo $_SESSION['username'];
                         ?>
@@ -65,7 +73,7 @@ require_once "../../config/config.php";
                     </p>
                 </div>
                 <div class="bottom">
-                    <p style="color:white;">    
+                    <p style="color:white;">
                         <?php
 
                         echo $_SESSION['description'];
@@ -73,8 +81,10 @@ require_once "../../config/config.php";
                         ?>
                     </p>
                     <div class="card-footer text-center">
-                        <a href="../../process/profil/print/print_pdf.php" class="btn btn-primary">Edit Profile <i class="fas fa-edit"></i></a>
-                        <a href="../../process/profil/print/print_pdf.php" class="btn btn-danger">Print Pdf<i class="fas fa-download"></i> </a>
+                        <a href="../../process/profil/print/print_pdf.php" class="btn btn-primary">Edit Profile <i
+                                class="fas fa-edit"></i></a>
+                        <a href="../../process/profil/print/print_pdf.php" class="btn btn-danger">Print Pdf<i
+                                class="fas fa-download"></i> </a>
                     </div>
                 </div>
             </div>
@@ -86,7 +96,7 @@ require_once "../../config/config.php";
                             <?php echo $_SESSION['name']; ?>
                         </li>
                         <li><strong>Nis:</strong>
-                            <?php echo $_SESSION['nis'];?>
+                            <?php echo $_SESSION['nis']; ?>
                         </li>
                         <li><strong>Phone:</strong>
                             <?php echo $_SESSION['phone']; ?>
@@ -111,6 +121,19 @@ require_once "../../config/config.php";
             </div>
         </div>
     </div>
+    <script>
+        function displayImage(input) {
+            const file = input.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    document.getElementById('profilePic').src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
 </body>
 
 </html>

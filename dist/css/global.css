@@ -351,6 +351,8 @@ label[for="nav-toggle"] {
 
 #nav-footer-avatar img {
     height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 #nav-footer-titlebox {
@@ -412,7 +414,7 @@ label[for="nav-footer-toggle"] {
     left: 15vw;
     top: 1vw;
     width: 80vw;
-    height: 93vh;
+    height: calc(100% - 2vw);
     background: var(--navbar-dark-primary);
     border-radius: 16px;
     display: flex;
@@ -424,45 +426,45 @@ label[for="nav-footer-toggle"] {
     transition: width 0.2s ease, left 0.2s ease;
 }
 
-nav{
-  height: 50px;
-  width: 80vw;
-  margin: 30px auto;
-  background-color: var(--navbar-dark-secondary);
-  border-radius: 20px;
-  display: flex;
-  justify-content: space-between;
-  font-family: 'Nunito Sans', sans-serif;
-  position: relative;
+nav {
+    height: 50px;
+    width: 80vw;
+    margin: 30px auto;
+    background-color: var(--navbar-dark-secondary);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Nunito Sans', sans-serif;
+    position: relative;
 }
 
-nav .search a{
+nav .search a {
     position: relative;
     top: 10px;
     left: 10px;
 }
 
-.links{
-  text-align: right;
+.links {
+    text-align: right;
 }
 
-.links a{
-  text-decoration: none;
-  color: var(--navbar-light-secondary);
-  padding: 15px;
-  position: relative;
-  top: 15px;
+.links a {
+    text-decoration: none;
+    color: var(--navbar-light-secondary);
+    padding: 15px;
+    position: relative;
+    top: 15px;
 }
 
-.links a:hover{
-  color: rgb(217,255,46);
+.links a:hover {
+    color: rgb(217, 255, 46);
 }
 
-nav p:hover{
-  color: rgb(217,255,46);
+nav p:hover {
+    color: rgb(217, 255, 46);
 }
 
-input[type="search"]{
+input[type="search"] {
     border: 1px solid var(--navbar-light-primary);
     border-radius: 20px;
     height: 2.5vh;
@@ -473,6 +475,6 @@ input[type="search"]{
 }
 
 .search a {
-    margin-left:10px;
+    margin-left: 10px;
     margin-right: 15px;
 }

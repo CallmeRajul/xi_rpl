@@ -5,12 +5,11 @@
 
 .container {
     display: flex;
-    height: 80%;
+    height: 100%;
     padding: 0px 20px;
 }
 
 body {
-    background-image: url(background.png);
     background-size: cover;
     height: 100vh;
     align-items: center;
@@ -18,10 +17,62 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.profile-pic {
-    border-radius: 50%;
-    margin-bottom: 10px;
+#fileInput {
+    display: none;
 }
+
+#imageContainer {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.wrapper {
+    height: 150px;
+    width: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+#profilePic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: 150ms ease;
+}
+
+label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#profilePic:hover {
+    filter: blur(5px);
+}
+
+.edit-icon {
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 24px;
+}
+
+#imageContainer:hover .edit-icon {
+    opacity: 1;
+}
+
+.edit-icon {
+    pointer-events: none;
+}
+
 
 .center {
     color: white;
@@ -37,9 +88,8 @@ body {
 
     background-color: transparent;
 
-    padding: 20px;
     height: 100%;
-    margin-right: 20px;
+    margin-right: 15px;
 }
 
 .top {
@@ -56,7 +106,7 @@ body {
     color: white;
     border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 20px;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.4);
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(15px);
 }
@@ -70,21 +120,21 @@ body {
     color: white;
     border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 20px;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.4);
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(15px);
 }
 
 .right {
     flex: 2;
-    margin: 20px;
     height: 100%;
+    margin-left: 15px;
 
     font-family: 'Montserrat', sans-serif;
     color: white;
     border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 20px;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.4);
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(15px);
 }
@@ -135,43 +185,9 @@ body {
     margin-left: 5px;
 }
 
-.profile-container {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    overflow: hidden;
-    border-radius: 50%;
-}
-
-.profile-pic {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    transition: 200ms ease-in;
-}
-
-.edit-icon {
-    position: absolute;
-    color: white;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    transition: opacity 0.2s ease;
-}
-
 p {
     color: white;
     text-align: center;
-}
-
-.profile-container:hover .edit-icon {
-    opacity: 1;
-}
-
-.profile-container:hover .profile-pic {
-    filter: blur(5px);
 }
 
 .btn-back {

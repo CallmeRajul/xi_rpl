@@ -25,7 +25,7 @@
                 case 'admin':
                 case 'operator':
                     echo ("
-                        <div class='nav-button' onclick=\"document.getElementById('profileLink').click()\"><i class='fas fa-user'></i><span>Profil</span></div>
+                        <div class='nav-button' onclick=\"document.getElementById('profileLink').click()\"><i class='fas fa-user'></i><span>Profile</span></div>
                         <div class='nav-button' onclick=\"document.getElementById('galleryLink').click()\"><i class='fas fa-image'></i><span>Gallery</span></div>
                         <div class='nav-button' onclick=\"document.getElementById('newsLink').click()\"><i class='fas fa-newspaper'></i><span>News</span></div>
                         <div class='nav-button' onclick=\"document.getElementById('absensiLink').click()\"><i class='fas fa-edit'></i><span>Absensi</span></div>
@@ -81,7 +81,7 @@
 
 <!-- LINKS -->
 
-<a href="../profile" id="profileLink" style="display:none;"></a>
+<a href="../profil" id="profileLink" style="display:none;"></a>
 <a href="../gallery" id="galleryLink" style="display:none;"></a>
 <a href="../news" id="newsLink" style="display:none;"></a>
 <a href="../absensi" id="absensiLink" style="display:none;"></a>
