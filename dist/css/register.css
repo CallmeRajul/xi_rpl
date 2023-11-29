@@ -297,6 +297,22 @@ select:hover {
     align-items: center;
 }
 
+.input-group.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .previous-next-btn {
     display: flex;
     align-items: center;

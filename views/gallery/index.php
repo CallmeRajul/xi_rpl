@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,6 +14,9 @@
     <link rel="stylesheet" href="../../dist/css/dashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="../../dist/img/favicon.svg" type="image/x-icon">
+
+    
     <title>Dashboard</title>
 </head>
 
@@ -40,7 +49,6 @@
                             echo '<img src="data:image/jpeg;base64,' . base64_encode($image) . '" class="card-img-top" alt="Image">';
                             ?>
                             <div class="card-body">
-                                <h5 class='card-title'>ID: <?= $row['id'] ?></h5>
                                 <p class='card-text'>Keterangan: <?= $row['keterangan'] ?></p>
                             </div>
                             <div class="card-footer text-center">

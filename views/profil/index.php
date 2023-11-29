@@ -27,6 +27,7 @@ require_once "../../config/config.php";
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+    <link rel="shortcut icon" href="../../dist/img/favicon.svg" type="image/x-icon">
 </head>
 
 <body>
@@ -52,8 +53,7 @@ require_once "../../config/config.php";
                             }
                             ?>
                             <i class="fas fa-edit edit-icon" style="font-size: 30px;"></i>
-                            <!-- <img src="default_user_image.jpg"  height="150"> -->
-                            <!-- <a href="fi" target="_blank"><i class="fas fa-edit edit-icon"></i></a> -->
+
                         </div>
                     </label>
                     <input type="file" id="fileInput" accept="image/*" onchange="displayImage(this)">
@@ -71,14 +71,17 @@ require_once "../../config/config.php";
                         ?>
                     </p>
                 </div>
-                <div class="bottom" style="height: 200px;">
-                    <p style="color:white;">
-                        <?php
+                <div class="bottom">
+                    <div class="desc">
+                        <p style="color:white;">
+                            <?php
 
-                        echo $_SESSION['description'];
+                            echo $_SESSION['description'];
 
-                        ?>
-                    </p>
+                            ?>
+                        </p>
+                    </div>
+
                     <div class="card-footer text-center">
                         <a href="../../process/profil/print/print_pdf.php" class="btn btn-primary">Edit Profile <i
                                 class="fas fa-edit"></i></a>
@@ -89,7 +92,7 @@ require_once "../../config/config.php";
             </div>
             <div class="right">
                 <div class="wrapping">
-                    <h2>Bio Lengkap</h2>
+                    <h2 style="text-align: center;">Bio Lengkap</h2>
                     <!-- <ul clas="list">
                         <li><strong>Name:</strong>
                             
@@ -116,18 +119,49 @@ require_once "../../config/config.php";
                             <?php echo $_SESSION['description']; ?>
                         </li>
                     </ul> -->
-                    <div class="kartu-name">
-                        <div>Nis: &nbsp;<strong><?php echo $_SESSION['nis']; ?></strong></div>
+                    <div class="contbio">
+                        <div class="barisan-kartu">
+                            <div class="kartu-name">
+                                <div>Nis: &nbsp;<strong>
+                                        <?php echo $_SESSION['nis']; ?>
+                                    </strong></div>
+                            </div>
+                            <div class="kartu-name">
+                                <div>Nama: &nbsp;<strong>
+                                        <?php echo $_SESSION['name']; ?>
+                                    </strong></div>
+                            </div>
+                            <div class="kartu-name">
+                                <div>Kelas: &nbsp;<strong>
+                                        <?php echo $_SESSION['class']; ?>
+                                    </strong></div>
+                            </div>
+                            <div class="kartu-name">
+                                <div>TanggalLahir: &nbsp;<strong>
+                                        <?php echo $_SESSION['birth']; ?>
+                                    </strong></div>
+                            </div>
+                        </div>
+                        <div class="fotokanan">
+                            <label for="inputFile" id="imageWrapper">
+                                <div class="centipede">
+                                    <?php
+                                    if (isset($_SESSION['image']) && !empty($_SESSION['image'])) {
+                                        $imageData = base64_decode($_SESSION['image']);
+                                        echo '<img src="data:image/jpeg;base64,' . base64_encode($imageData) . '" class="profile-pic" alt="Profile Pic" id="profilePhoto">';
+                                    } else {
+                                        echo '<img src="../../dist/img/profile-pic.jpg" class="profile-pic" alt="Default Profile Pic" id="profilePhoto">';
+                                    }
+                                    ?>
+                                    <i class="fas fa-edit edits" style="font-size: 60px;"></i>
+
+                                </div>
+                            </label>
+                            <input type="file" id="inputFile" accept="image/*" onchange="displayImage(this)">
+
+                        </div>
                     </div>
-                    <div class="kartu-name">
-                        <div>Nama: &nbsp;<strong><?php echo $_SESSION['name']; ?></strong></div>
-                    </div>
-                    <div class="kartu-name">
-                        <div>Kelas: &nbsp;<strong><?php echo $_SESSION['class']; ?></strong></div>
-                    </div>
-                    <div class="kartu-name">
-                        <div>TanggalLahir: &nbsp;<strong><?php echo $_SESSION['birth']; ?></strong></div>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -140,6 +174,18 @@ require_once "../../config/config.php";
                 const reader = new FileReader();
                 reader.onload = function (e) {
                     document.getElementById('profilePic').src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function displayImage(input) {
+            const file = input.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    document.getElementById('profilePhoto').src = e.target.result;
                 };
                 reader.readAsDataURL(file);
             }

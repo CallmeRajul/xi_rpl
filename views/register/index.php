@@ -19,6 +19,7 @@ if (isset($_SESSION['nis'])) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="shortcut icon" href="../../dist/img/favicon.svg" type="image/x-icon">
     <style>
     </style>
 </head>
@@ -39,7 +40,7 @@ if (isset($_SESSION['nis'])) {
             <form action="../../process/register/register_process.php" method="post" id="myForm"
                 enctype="multipart/form-data">
                 <!-- First Group -->
-                <div class="input-group">
+                <div class="input-group step" id="step1">
                     <input type="number" id="nis" name="nis" placeholder="NIS*" required>
                     <input type="text" name="username" id="username" placeholder="Username*" style="margin-top: 30px;"
                         required>
@@ -53,7 +54,7 @@ if (isset($_SESSION['nis'])) {
                     </select>
                 </div>
                 <!-- Second Group -->
-                <div class="input-group" style="display: none;">
+                <div class="input-group step" style="display: none;" id="step2">
                     <input type="text" name="name" id="name" placeholder="Name" required>
                     <input type="tel" name="phone" id="phone" placeholder="Phone" required>
                     <input type="email" name="email" id="email" placeholder="Email" style="margin-top: 30px;" required>
@@ -64,7 +65,7 @@ if (isset($_SESSION['nis'])) {
                     </select>
                 </div>
                 <!-- Third Group -->
-                <div class="input-group" style="display: none;">
+                <div class="input-group step" style="display: none;" id="step3">
 
                     <input type="date" name="birth" id="birth" placeholder="Birth" style="margin-top: 30px;" required>
                     <input type="text" placeholder="Address" id="address" name="address" style="margin-top: 30px;">
@@ -76,8 +77,8 @@ if (isset($_SESSION['nis'])) {
             </form>
         </div>
         <div class="form-button">
-            <a href="#" class="previous-next-btn" onclick="changeForm(-1)"><i class="fas fa-arrow-left"></i></a>
-            <a href="#" class="previous-next-btn" onclick="changeForm(1)"><i class="fas fa-arrow-right"></i></a>
+            <a href="#" class="previous-next-btn" onclick="changeForm(-1)" data-direction="previous"><i class="fas fa-arrow-left"></i></a>
+            <a href="#" class="previous-next-btn" onclick="changeForm(1)" data-direction="next"><i class="fas fa-arrow-right"></i></a>
         </div>
         <p class="register-text">Have An Account? <a href="../login">Log In</a></p>
         <p class="copyright"> © 2023 XI RPL Copyright Dimensions</p>

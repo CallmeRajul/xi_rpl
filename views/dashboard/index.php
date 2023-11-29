@@ -17,6 +17,7 @@ if (!isset($_SESSION['nis'])) {
     <link rel="stylesheet" href="../../dist/css/global.css">
     <link rel="stylesheet" href="../../dist/css/dashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css  ">
+    <link rel="shortcut icon" href="../../dist/img/favicon.svg" type="image/x-icon">
     <title>Dashboard</title>
 </head>
 
