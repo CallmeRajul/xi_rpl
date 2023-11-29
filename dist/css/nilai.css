@@ -6,10 +6,17 @@
 
 }
 .judul {
+	width: 90%;
 	color: beige;
 	margin-left: 50px;
 	padding: 10px;
+	display: flex;
+	justify-content: space-between;
 }
+
+/* .pdfbutton {
+	
+} */
 
 table {
 	width: 100%;

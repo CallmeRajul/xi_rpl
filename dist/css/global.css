@@ -249,7 +249,7 @@ label[for="nav-toggle"] {
 }
 
 .nav-button:nth-of-type(1):hover {
-    color: var(--navbar-dark-primary);
+    color: #FFFFFF;
 }
 
 .nav-button:nth-of-type(1):hover~#nav-content-highlight {
@@ -257,7 +257,7 @@ label[for="nav-toggle"] {
 }
 
 .nav-button:nth-of-type(2):hover {
-    color: var(--navbar-dark-primary);
+    color: #FFFFFF;
 }
 
 .nav-button:nth-of-type(2):hover~#nav-content-highlight {
@@ -265,7 +265,7 @@ label[for="nav-toggle"] {
 }
 
 .nav-button:nth-of-type(3):hover {
-    color: var(--navbar-dark-primary);
+    color: #FFFFFF;
 }
 
 .nav-button:nth-of-type(3):hover~#nav-content-highlight {
@@ -273,7 +273,7 @@ label[for="nav-toggle"] {
 }
 
 .nav-button:nth-of-type(4):hover {
-    color: var(--navbar-dark-primary);
+    color: #FFFFFF;
 }
 
 .nav-button:nth-of-type(4):hover~#nav-content-highlight {
@@ -281,7 +281,7 @@ label[for="nav-toggle"] {
 }
 
 .nav-button:nth-of-type(5):hover {
-    color: var(--navbar-dark-primary);
+    color: #FFFFFF;
 }
 
 .nav-button:nth-of-type(5):hover~#nav-content-highlight {
@@ -289,7 +289,7 @@ label[for="nav-toggle"] {
 }
 
 .nav-button:nth-of-type(6):hover {
-    color: var(--navbar-dark-primary);
+    color: #FFFFFF;
 }
 
 .nav-button:nth-of-type(6):hover~#nav-content-highlight {
@@ -297,7 +297,7 @@ label[for="nav-toggle"] {
 }
 
 .nav-button:nth-of-type(7):hover {
-    color: var(--navbar-dark-primary);
+    color: #FFFFFF;
 }
 
 .nav-button:nth-of-type(7):hover~#nav-content-highlight {
@@ -305,7 +305,7 @@ label[for="nav-toggle"] {
 }
 
 .nav-button:nth-of-type(8):hover {
-    color: var(--navbar-dark-primary);
+    color: #FFFFFF;
 }
 
 .nav-button:nth-of-type(8):hover~#nav-content-highlight {
