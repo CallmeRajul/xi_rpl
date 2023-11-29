@@ -21,6 +21,9 @@ if (!isset($_SESSION['nis'])) {
     <link rel="stylesheet" href="../../dist/css/dashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css  ">
     <title>Dashboard</title>
+    <style>
+    </style>
+    
 </head>
 
 <body>
@@ -35,12 +38,9 @@ if (!isset($_SESSION['nis'])) {
     <div class="card-content">
       <h2 class="card-title">Viral Bendahara Kelas Dibunuh Teman Gara-gara Tagih Iuran Kas, Jasad Korban Dimasukkan Karung</h2>
       <p class="card-summary">Viral seorang bendahara kelas berinisial AE (15) tahun menjadi korban pembunhan oleh teman sekelasnya sendiri.
-
-Pelaku pembunuhan ini adalah AB (15).
-
-Dalam menjalankan aksinya AB tak sendiri, ia dibantu MA (190) yang kini juga sudah ditahan polisi.</p>
+Pelaku pembunuhan ini adalah AB (15).Dalam menjalankan aksinya AB tak sendiri, ia dibantu MA (190) yang kini juga sudah ditahan polisi.</p>
       <p class="card-details">
-        Detail berita yang menarik bisa ditambahkan di sini.
+        Berita Lainnya:
       </p>
       <p class="card-source">Sumber: Denaa.com</p>
     </div>

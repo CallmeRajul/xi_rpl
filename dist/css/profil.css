@@ -23,15 +23,28 @@ body {
 
 #imageContainer {
     position: relative;
-    width: 150px;
-    height: 150px;
+    width: 170px;
+    height: 170px;
     overflow: hidden;
     cursor: pointer;
+    border-radius: 50%;
+    background: linear-gradient(to right,
+            rgb(131, 58, 180),
+            /* Start color: Purple */
+            rgb(253, 29, 29),
+            /* Mid color: Red */
+            rgb(252, 176, 69),
+            /* Mid color: Orange */
+            rgb(252, 233, 79),
+            /* Mid color: Yellow */
+            rgb(161, 205, 72),
+            rgb(30, 144, 255)
+        );
 }
 
 .wrapper {
-    height: 145px;
-    width: 145px;
+    height: 170px;
+    width: 170px;
     overflow: hidden;
     border-radius: 50%;
 }
@@ -48,6 +61,7 @@ label {
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 #profilePic:hover {
@@ -67,6 +81,10 @@ label {
 
 #imageContainer:hover .edit-icon {
     opacity: 1;
+}
+
+#imageContainer:hover #profilePic {
+    filter: blur(5px);
 }
 
 .edit-icon {
@@ -195,7 +213,24 @@ p {
     font-family: 'Montserrat', sans-serif;
 }
 
-.card-name {
+.name {
     width: 80%;
-    background-color: white;
+    height: 80%;
+
+}
+
+            .kartu-name{
+    margin-top: 10px;
+    display: flex;
+    width: 400px;
+ height: 40px;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 16px;
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(15px);
+ 
+ align-items:center;
+ padding:20px
 }

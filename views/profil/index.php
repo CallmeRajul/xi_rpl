@@ -41,7 +41,7 @@ require_once "../../config/config.php";
         <div class="container">
             <div class="left">
                 <div class="top">
-                    <label for="fileInput" id="imageContainer">
+                    <label for="fileInput" id="imageContainer" style="border-radius: 50%; ">
                         <div class="wrapper">
                             <?php
                             if (isset($_SESSION['image']) && !empty($_SESSION['image'])) {
@@ -51,7 +51,7 @@ require_once "../../config/config.php";
                                 echo '<img src="../../dist/img/profile-pic.jpg" class="profile-pic" alt="Default Profile Pic" id="profilePic">';
                             }
                             ?>
-                            <i class="fas fa-edit edit-icon"></i>
+                            <i class="fas fa-edit edit-icon" style="font-size: 30px;"></i>
                             <!-- <img src="default_user_image.jpg"  height="150"> -->
                             <!-- <a href="fi" target="_blank"><i class="fas fa-edit edit-icon"></i></a> -->
                         </div>
@@ -71,7 +71,7 @@ require_once "../../config/config.php";
                         ?>
                     </p>
                 </div>
-                <div class="bottom">
+                <div class="bottom" style="height: 200px;">
                     <p style="color:white;">
                         <?php
 
@@ -92,7 +92,7 @@ require_once "../../config/config.php";
                     <h2>Bio Lengkap</h2>
                     <!-- <ul clas="list">
                         <li><strong>Name:</strong>
-                            <?php echo $_SESSION['name']; ?>
+                            
                         </li>
                         <li><strong>Nis:</strong>
                             <?php echo $_SESSION['nis']; ?>
@@ -116,8 +116,17 @@ require_once "../../config/config.php";
                             <?php echo $_SESSION['description']; ?>
                         </li>
                     </ul> -->
-                    <div class="card-name">
-                        
+                    <div class="kartu-name">
+                        <div>Nis: &nbsp;<strong><?php echo $_SESSION['nis']; ?></strong></div>
+                    </div>
+                    <div class="kartu-name">
+                        <div>Nama: &nbsp;<strong><?php echo $_SESSION['name']; ?></strong></div>
+                    </div>
+                    <div class="kartu-name">
+                        <div>Kelas: &nbsp;<strong><?php echo $_SESSION['class']; ?></strong></div>
+                    </div>
+                    <div class="kartu-name">
+                        <div>TanggalLahir: &nbsp;<strong><?php echo $_SESSION['birth']; ?></strong></div>
                     </div>
                 </div>
             </div>
