@@ -30,8 +30,8 @@ body {
 }
 
 .wrapper {
-    height: 150px;
-    width: 150px;
+    height: 145px;
+    width: 145px;
     overflow: hidden;
     border-radius: 50%;
 }
@@ -193,4 +193,9 @@ p {
 .btn-back {
     color: white;
     font-family: 'Montserrat', sans-serif;
+}
+
+.card-name {
+    width: 80%;
+    background-color: white;
 }

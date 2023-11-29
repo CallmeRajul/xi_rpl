@@ -1,5 +1,5 @@
 <?php
-require_once "../config/config.php";
+require_once "../../config/config.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bindParam(6, $gambar);
 
         if ($stmt->execute()) {
-            header("Location: ../views/news");
+            header("Location: ../../views/news");
             exit;
         } else {
             echo "Failed to execute query.";

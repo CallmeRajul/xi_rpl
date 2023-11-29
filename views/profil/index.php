@@ -51,7 +51,6 @@ require_once "../../config/config.php";
                                 echo '<img src="../../dist/img/profile-pic.jpg" class="profile-pic" alt="Default Profile Pic" id="profilePic">';
                             }
                             ?>
-
                             <i class="fas fa-edit edit-icon"></i>
                             <!-- <img src="default_user_image.jpg"  height="150"> -->
                             <!-- <a href="fi" target="_blank"><i class="fas fa-edit edit-icon"></i></a> -->
@@ -91,7 +90,7 @@ require_once "../../config/config.php";
             <div class="right">
                 <div class="wrapping">
                     <h2>Bio Lengkap</h2>
-                    <ul clas="list">
+                    <!-- <ul clas="list">
                         <li><strong>Name:</strong>
                             <?php echo $_SESSION['name']; ?>
                         </li>
@@ -116,7 +115,10 @@ require_once "../../config/config.php";
                         <li><strong>Description:</strong>
                             <?php echo $_SESSION['description']; ?>
                         </li>
-                    </ul>
+                    </ul> -->
+                    <div class="card-name">
+                        
+                    </div>
                 </div>
             </div>
         </div>
