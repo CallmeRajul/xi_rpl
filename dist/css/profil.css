@@ -30,13 +30,9 @@ body {
     border-radius: 50%;
     background: linear-gradient(to right,
             rgb(131, 58, 180),
-            /* Start color: Purple */
             rgb(253, 29, 29),
-            /* Mid color: Red */
             rgb(252, 176, 69),
-            /* Mid color: Orange */
             rgb(252, 233, 79),
-            /* Mid color: Yellow */
             rgb(161, 205, 72),
             rgb(30, 144, 255)
         );
