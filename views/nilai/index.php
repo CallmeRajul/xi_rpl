@@ -7,9 +7,6 @@ if (isset($_SESSION['nis']) == null) {
     exit();
 }
 
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -57,9 +54,6 @@ if (isset($_SESSION['nis']) == null) {
                 include "teacher.php";
             }
             ?>
-
-
-
         </div>
 
     </div>

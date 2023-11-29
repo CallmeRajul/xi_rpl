@@ -5,6 +5,7 @@
 	width: 100%;
 
 }
+
 .judul {
 	width: 90%;
 	color: beige;
@@ -22,8 +23,6 @@ table {
 	width: 100%;
 	border-collapse: collapse;
 	table-layout: fixed;
-  margin: 0px 3%;
- 
 }
 
 caption {
@@ -34,7 +33,7 @@ caption {
 thead tr,
 tfoot tr {
 	background: white;
-  color: black;
+	color: black;
 }
 
 tbody tr:nth-child(even) {
@@ -48,12 +47,12 @@ td {
 	text-align: left;
 	vertical-align: top;
 	font-weight: normal;
-  transition: 150ms ease;
+	transition: 150ms ease;
 }
 
 td:hover {
-  background-color: white;
-  color: black;
+	background-color: white;
+	color: black;
 }
 
 .scrollable thead,
@@ -100,4 +99,9 @@ td:hover {
 .scrollable th:not(:last-child),
 .scrollable td:not(:last-child) {
 	border-right: none;
+}
+
+.btn {
+	background-color: transparent;
+	border: none;
 }

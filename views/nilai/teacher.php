@@ -1,5 +1,21 @@
+<style>
+    .tablewrapper {
+        padding: 100px;
+    }
+    .btn {
+        background-color: white;
+        border: none;
+        color: black;
+        font-size: 20px;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+    }
+</style>
 
-<table class="scrollable">
+
+<div class="tablewrapper">
+    <table class="scrollable" style="margin: 0;">
         <thead>
             <tr>
                 <th>GOBLOK</th>
@@ -141,3 +157,4 @@
             </tr>
         </tbody>
     </table>
+</div>
