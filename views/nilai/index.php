@@ -29,7 +29,13 @@ if (isset($_SESSION['nis']) == null) {
     include "../komponen/sidebar.php";
 
     ?>
-    <div id="main-content">
+    <div id="main-content" style="font-family: 'Montserrat', sans-serif;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(15px);">
         <?php
 
         include "../komponen/navbar.php"
