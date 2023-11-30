@@ -2,10 +2,10 @@
 require_once '../../config/config.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-   
+
     $nis = $_POST['nis'];
     $username = $_POST['username'];
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT); 
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
     $role = $_POST['role'];
 
     $name = $_POST['name'];
@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     try {
-     
+
         $stmt = $conn->prepare("INSERT INTO user (nis, username, password, role) VALUES (:nis, :username, :password, :role)");
         $stmt->bindParam(':nis', $nis);
         $stmt->bindParam(':username', $username);
@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->bindParam(':role', $role);
         $stmt->execute();
 
-      
+
         $stmt = $conn->prepare("INSERT INTO profil (nis, name, email, phone, class, birth, adress, description, image) VALUES (:nis, :name, :email, :phone, :class, :birth, :adress, :description, :image)");
         $stmt->bindParam(':nis', $nis);
         $stmt->bindParam(':name', $name);
@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->bindParam(':image', $image);
         $stmt->execute();
 
-      
+
         header("Location: ../../views/dashboard/");
         exit();
     } catch (PDOException $e) {
@@ -54,8 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $conn = null;
 } else {
-   
+
     header("Location: ../../views/register/");
     exit();
 }
-?>

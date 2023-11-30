@@ -5,7 +5,6 @@ if (isset($_SESSION['nis'])) {
     header("Location: ../dashboard/");
     exit();
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,13 +36,11 @@ if (isset($_SESSION['nis'])) {
             <p>Sign In First To Log In To Our Website</p>
         </div>
         <div class="form-wrapper">
-            <form action="../../process/register/register_process.php" method="post" id="myForm"
-                enctype="multipart/form-data">
+            <form action="../../process/register/register_process.php" method="post" id="myForm" enctype="multipart/form-data">
                 <!-- First Group -->
                 <div class="input-group step" id="step1">
                     <input type="number" id="nis" name="nis" placeholder="NIS*" required>
-                    <input type="text" name="username" id="username" placeholder="Username*" style="margin-top: 30px;"
-                        required>
+                    <input type="text" name="username" id="username" placeholder="Username*" style="margin-top: 30px;" required>
                     <div class="password-container">
                         <input type="password" placeholder="Password*" id="password" name="password">
                         <i class="fa-solid fa-eye" id="eye"></i>
@@ -69,8 +66,7 @@ if (isset($_SESSION['nis'])) {
 
                     <input type="date" name="birth" id="birth" placeholder="Birth" style="margin-top: 30px;" required>
                     <input type="text" placeholder="Address" id="address" name="address" style="margin-top: 30px;">
-                    <input type="text" placeholder="Description" id="description" name="description"
-                        style="margin-top: 30px;">
+                    <input type="text" placeholder="Description" id="description" name="description" style="margin-top: 30px;">
                     <input type="file" id="image" name="image" accept=".jpg, .jpeg, .png" style="margin-top: 30px;">
                     <button class="ripple">Register</button>
                 </div>
