@@ -1,7 +1,7 @@
 .container {
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	/* justify-content: center;
+	align-items: center; */
 	width: 100%;
 
 }
@@ -105,3 +105,17 @@ td:hover {
 	background-color: transparent;
 	border: none;
 }
+
+/* STUDENT */
+.biocontainer {
+	padding: 20px;
+	color: white;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(15px);
+	margin-left: 50px;
+	width: 300px;
+}
+

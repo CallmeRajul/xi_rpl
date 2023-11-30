@@ -43,7 +43,7 @@ if (isset($_SESSION['nis']) == null) {
             </div>
         </div>
 
-        <div class="container">
+        
 
             <?php
             if (isset($_SESSION['role']) && $_SESSION['role'] == 'student') {
@@ -54,7 +54,7 @@ if (isset($_SESSION['nis']) == null) {
                 include "teacher.php";
             }
             ?>
-        </div>
+        
 
     </div>
     <script src="../../dist/js/global.js"></script>
